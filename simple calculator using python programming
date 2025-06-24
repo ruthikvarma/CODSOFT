@@ -1,0 +1,41 @@
+# This is a simple calculator to perform basic arithmetic operations
+
+print("Welcome to the Basic Calculator!")
+print("You can choose to Add, Subtract, Multiply, or Divide two numbers.")
+
+# Taking the first number from the application user
+number1 = input("Please enter the first number: ")
+number1 = float(number1)
+
+# Taking the second number from the application user
+number2 = input("Please enter the second number: ")
+number2 = float(number2)
+
+# Showing the operations
+print("What operation would you like to perform?")
+print("Type + for Addition")
+print("Type - for Subtraction")
+print("Type * for Multiplication")
+print("Type / for Division")
+
+# Asking the application user to choose an operation
+operation = input("Enter your operation (+, -, *, /): ")
+
+# Doing calculation based on application user's choice
+if operation == "+":
+    result = number1 + number2
+    print("The result of addition is:", result)
+elif operation == "-":
+    result = number1 - number2
+    print("The result of subtraction is:", result)
+elif operation == "*":
+    result = number1 * number2
+    print("The result of multiplication is:", result)
+elif operation == "/":
+    if number2 == 0:
+        print("Error! Cannot divide by zero.")
+    else:
+        result = number1 / number2
+        print("The result of division is:", result)
+else:
+    print("Invalid operation selected. Please try again.")
